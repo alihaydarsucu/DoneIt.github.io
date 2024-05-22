@@ -1,0 +1,241 @@
+html {
+    background-color: #EDF5F4;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.container+error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    width: 40%;
+    background: white;
+    border-color: #006FC4;
+    border-width: 30px;
+    border-radius: 0.8em;
+    min-width: 450px;
+    position: relative;
+    min-height: 10px;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+    margin-top: 4em;
+    font-family: "Poppins", sans-serif;
+    z-index: 2;
+    padding: 20px;
+}
+
+#search-input, #category-dropdown {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #111111;
+    font-size: 0.9em;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 0.8em 0.5em;
+}
+
+#category-dropdown {
+    text-align: center;
+}
+
+#task-category {
+    text-align: center;
+}
+
+#error {
+    text-align: center;
+    margin: auto;
+    display: none;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: #f21404;
+    background-color: white;
+    border-radius: 0.8em;
+    padding: 1em 0;
+    width: 350px;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+#wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#wrapper input, #wrapper select, #wrapper button {
+    flex: 1;
+}
+
+#wrapper input {
+    background-color: transparent;
+    color: #111111;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 0.8em 0.5em;
+}
+
+#wrapper input:focus {
+    border-radius: 0.5em;
+    border-color: #006FC4;
+    outline: none;
+}
+
+#search-input {
+    background-color: transparent;
+    color: #111111;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 0.8em 0.5em;
+}
+
+#search-input:focus {
+    border-radius: 0.5em;
+    border-color: #006FC4;
+    outline: none;
+}
+
+#wrapper button {
+    border-radius: 0.5em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #0091ff;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.first-line {
+    font-size: 40px;
+    font-weight: bold;
+    color: #006FC4;
+    text-align: center;
+    line-height: 3px;
+    padding-top: 0.7em;
+}
+
+.second-line {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    color: #2f2f4f;
+    text-align: center;
+    line-height: 3px;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    padding: 10px;
+    align-items: center;
+}
+
+.task button {
+    color: #ffffff;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.edit {
+    background-color: green;
+}
+
+.delete {
+    background-color: #f21404;
+}
+
+.language-part {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #0262ac;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1em;
+    margin-right:1em;
+}
+
+.language-part:hover .language-section {
+    display: block;
+    background-color: #0262ac;
+    z-index: 1;
+}
+
+.language-section {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100px;
+    padding: 10px;
+    background-color: #0262ac;
+    border-radius: 0 0 10px 10px;
+}
+
+.language-section a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-section a:hover {
+    background-color: #0262ac;
+}
+
+.language-section a.active {
+    font-weight: bold;
+}
+
+.language-section a:not(:last-child) {
+    margin-bottom: 5px;
+}
