@@ -1,3 +1,7 @@
+* {
+    box-sizing:  border-box;
+}
+
 html {
     background-color: #EDF5F4;
     box-sizing: border-box;
@@ -26,6 +30,7 @@ body {
 }
 
 .container {
+    max-width: 100vw;
     width: 40%;
     background: white;
     border-color: #006FC4;
@@ -205,6 +210,7 @@ body {
 }
 
 .language-section {
+    z-index: 99;
     display: none;
     position: absolute;
     top: 50px;
