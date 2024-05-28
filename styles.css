@@ -206,11 +206,10 @@ body {
 .language-part:hover .language-section {
     display: block;
     background-color: #0262ac;
-    z-index: 1;
+    z-index: 999;
 }
 
 .language-section {
-    z-index: 99999999999;
     display: none;
     position: absolute;
     top: 50px;
