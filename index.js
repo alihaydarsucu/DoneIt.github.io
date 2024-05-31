@@ -174,7 +174,7 @@ function updateTaskContainer() {
 
     if ((filterCategory === "" || taskCategory === filterCategory) &&
         (filterText === "" || taskText.includes(filterText))) {
-      task.style.display = "block";
+      task.style.display = "grid";
     } else {
       task.style.display = "none";
     }
