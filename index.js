@@ -117,9 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function addTask(task, category) {
   if (!task.trim()) {
+    error.style.display = "block";
     setTimeout(function () {
-      error.style.display = "block";
-    }, 200);
+      error.style.display = "none";
+    }, 2000);
     return;
   }
 
