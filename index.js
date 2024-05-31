@@ -61,7 +61,7 @@ const data = {
     searchInputText: "مهام البحث...",
     error : "يجب ألا تكون المدخلات فارغة!"
   },
-    russian: {
+  russian: {
     firstLine: "Отделка",
     secondLine: "Успевайте делать дела.",
     pushButton: "Добавить",
