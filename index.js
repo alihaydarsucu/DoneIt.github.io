@@ -65,7 +65,7 @@ const data = {
     firstLine: "Отделка",
     secondLine: "Успевайте делать дела.",
     pushButton: "Добавить",
-    inputFieldText: "Напечатайте что-нибудь, чем можно заняться.",
+    inputFieldText: "Напечатайте что-нибудь.",
     allCategories: "Все категории",
     workCategory: "Работа",
     personalCategory: "Личный",
