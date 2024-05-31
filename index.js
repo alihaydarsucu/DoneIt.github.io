@@ -61,6 +61,21 @@ const data = {
     searchInputText: "مهام البحث...",
     error : "يجب ألا تكون المدخلات فارغة!"
   },
+    russian: {
+    firstLine: "Отделка",
+    secondLine: "Успевайте делать дела.",
+    pushButton: "Добавить",
+    inputFieldText: "Напечатайте что-нибудь, чем можно заняться.",
+    allCategories: "Все категории",
+    workCategory: "Работа",
+    personalCategory: "Личный",
+    otherCategory: "Другие",
+    workCategory1: "Работа",
+    personalCategory1: "Личный",
+    otherCategory1: "Другие",
+    searchInputText: "Поисковые задачи...",
+    error: "Входные данные не должны быть пустыми!"
+  }
 };
 
 document.addEventListener("DOMContentLoaded", function () {
