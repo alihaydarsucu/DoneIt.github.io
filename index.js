@@ -75,21 +75,6 @@ const data = {
     otherCategory1: "Другие",
     searchInputText: "Поисковые задачи...",
     error: "Входные данные не должны быть пустыми!"
-  },
-  uzbek: {
-    firstLine: "Tugat",
-    secondLine: "Ishlarni bajaring.",
-    pushButton: "Qo'shish",
-    inputFieldText: "Nimadir yozing.",
-    allCategories: "Barcha Toifalar",
-    workCategory: "Ish",
-    personalCategory: "Shaxsiy",
-    otherCategory: "Boshqa",
-    workCategory1: "Ish",
-    personalCategory1: "Shaxsiy",
-    otherCategory1: "Boshqa",
-    searchInputText: "Vazifa qidirish...",
-    error: "Kirish bo'sh bo'lmasligi kerak!"
   }
 };
 
