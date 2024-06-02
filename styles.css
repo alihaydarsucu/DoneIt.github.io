@@ -22,7 +22,7 @@ body {
     text-align: center;
 }
 
-.container+error {
+.container_error {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,7 +199,7 @@ body {
     line-height: 40px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-right:1em;
 }
 
@@ -243,4 +243,67 @@ body {
 
 .language-section a:not(:last-child) {
     margin-bottom: 5px;
+}
+
+/* Some Arrangements for mobile devices */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        min-width: auto;
+        border-width: 20px;
+        padding: 10px;
+    }
+
+    .first-line {
+        font-size: 30px;
+    }
+
+    .second-line {
+        font-size: 16px;
+    }
+
+    #wrapper {
+        flex-direction: column;
+    }
+
+    #wrapper input, #wrapper select, #wrapper button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .language-part {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        margin-top: 2.5em;
+    }
+
+    .language-section {
+        width: 80px;
+        top: 40px;
+        right: -20px;
+    }
+
+    .language-section a {
+        font-size: 12px;
+    }
+
+    #error {
+        width: 90%;
+        font-size: 14px;
+        padding: 0.5em 0;
+    }
+
+    #category-dropdown {
+        text-align: center;
+    }
+    
+    #task-category {
+        text-align: center;
+    }
 }
