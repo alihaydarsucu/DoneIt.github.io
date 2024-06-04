@@ -5,6 +5,17 @@ Done It is a task management application designed to help users easily plan and 
 
 "Done It" supports five different languages, allowing users to manage their tasks in their preferred language. The app is helpful for organizing tasks efficiently and marking completed ones effortlessly.
 
+
+  
+## Features
+
+- Adding new tasks.
+- Editing and deleting existing tasks.
+- Selecting and filtering categories.
+- Search between tasks.
+- Change the language of the page. (5 language is ready until today.)
+
+
 ## Instructions and Examples
 
 ### General View
@@ -44,16 +55,6 @@ Here are the supported languages;
 - Russian
 - Uzbek
 
-
-  
-## Features
-
-- Adding new tasks.
-- Editing and deleting existing tasks.
-- Selecting and filtering categories.
-- Search between tasks.
-- Change the language of the page. (5 language is ready until today.)
-
   
 ## Technologies Used
 
@@ -65,5 +66,3 @@ Here are the supported languages;
 ## For Feedback
 
 If you have any feedback, please contact me at alihaydarsucu@gmail.com
-
-  
