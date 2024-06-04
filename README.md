@@ -1,8 +1,4 @@
-<p align="center" width="30" height="30">
-    <img src="done-it.jpeg" alt="Açıklama">
-</p>
 
-    
 # Done It
 
 Done It is a task management application designed to help users easily plan and track their tasks. With a simple and user-friendly interface, you can add, edit, and categorize tasks into work, personal, or other categories. 
