@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" width="30" height="30">
     <img src="done-it.jpeg" alt="Açıklama">
 </p>
 
