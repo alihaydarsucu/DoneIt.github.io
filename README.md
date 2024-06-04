@@ -37,7 +37,7 @@ Category search allows you to sift and sort the tasks you have added according t
 
 When you try to add a task without typing anything, you get an error message that appears on the screen and warns you for two seconds. 
 Also all elements on the page support 5 different languages.
-The Supported Languages;
+Here are the supported languages;
 - English
 - Turkish
 - Arabic
