@@ -3,9 +3,9 @@
 
 https://alihaydarsucu.github.io/done-it.github.io/#
 
-Done It is a task management application designed to help users easily plan and track their tasks. With a simple and user-friendly interface, you can add, edit, and categorize tasks into work, personal, or other categories. 
+Done It is a task management application designed to help users easily plan and track their tasks. With a simple interface, you can add, edit, and categorize tasks into work, personal, or other categories. 
 
-"Done It" supports five different languages, allowing users to manage their tasks in their preferred language. The app is helpful for organizing tasks efficiently and marking completed ones effortlessly.
+"Done It" supports five different languages, allowing users to manage their tasks in their preferred language. The app is helpful for organizing tasks efficiently.
 
 
   
@@ -14,8 +14,8 @@ Done It is a task management application designed to help users easily plan and 
 - Adding new tasks.
 - Editing and deleting existing tasks.
 - Selecting and filtering categories.
-- Search between tasks.
-- Change the language of the page. (5 language is ready until today.)
+- Searching between tasks.
+- Changing the language of the page. (5 language is ready until today.)
 
 
 ## Instructions and Examples
@@ -29,6 +29,8 @@ Done It is a task management application designed to help users easily plan and 
 
 ![Usage Example](Readme_Files/second_photo.JPG)
 
+Here you see an example with 3 tasks added to "Done It".
+
 
 ### The Search Bar
 
@@ -41,7 +43,7 @@ When you type something in the search bar, it searches for it among the existing
 
 ![Operation of the categries section](Readme_Files/fourth_gif.gif)
 
-Category search allows you to sift and sort the tasks you have added according to the categories you have added.
+Category search allows you to sort the tasks you have added according to the categories you have added.
 
 
 ### Language Section and Error Message
@@ -60,11 +62,4 @@ Here are the supported languages;
   
 ## Technologies Used
 
-**HTML ,**
-**CSS ,**
-**and JavaScript**
-
-  
-## For Feedback
-
-If you have any feedback, please contact me at alihaydarsucu@gmail.com
+**HTML ,CSS , and JavaScript**
