@@ -63,3 +63,14 @@ Here are the supported languages;
 ## Technologies Used
 
 **HTML ,CSS , and JavaScript**
+
+## Special Thanks To
+#### For Project;
+
+- Osman Nuri Yıldız 
+- Mahmut Esat Arslan
+
+#### For Translations;
+
+- Yusuf Vural (Arabic)
+- Osiya Kurbonov (Russian and Uzbek)
