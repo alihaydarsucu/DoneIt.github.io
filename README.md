@@ -73,4 +73,4 @@ Here are the supported languages;
 #### For Translations;
 
 - Yusuf Vural (Arabic)
-- Osiya Kurbonov (Russian and Uzbek)
+- Osiya Kurbonova (Russian and Uzbek)
