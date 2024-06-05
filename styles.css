@@ -306,8 +306,5 @@ body {
     #task-category {
         text-align: center;
     }
-    
-    .category-and-button select, .category-and-button button {
-        flex: 1;
-    }
+
 }
