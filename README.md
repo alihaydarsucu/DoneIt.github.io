@@ -66,19 +66,8 @@ Here are the supported languages;
 
 ## Special Thanks To
 
-
-Friends;
-
 - Osman Nuri Yıldız 
 - Mahmut Esat Arslan
-
-
-Tester;
-
-- H. Salih Toker
-
- 
- Translators;
-
-- Yusuf Vural (Arabic)
-- Osiya Kurbonova (Russian and Uzbek)
+- H. Salih Toker (for Tests)
+- Yusuf Vural (fo Arabic translation)
+- Osiya Kurbonova (fo Russian and Uzbek translations)
