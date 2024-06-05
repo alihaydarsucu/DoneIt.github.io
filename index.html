@@ -42,12 +42,14 @@
             </select>
             <div id="wrapper">
                 <input type="text" id="input-field" placeholder="Type something to do.">
-                <select id="task-category">
-                    <option value="work" id="workCategory1">Work</option>
-                    <option value="personal" id="personalCategory1">Personal</option>
-                    <option value="other" id="otherCategory1">Other</option>
-                </select>
-                <button id="push">Add</button>
+                <div class="category-and-button">
+                    <select id="task-category">
+                        <option value="work" id="workCategory1">Work</option>
+                        <option value="personal" id="personalCategory1">Personal</option>
+                        <option value="other" id="otherCategory1">Other</option>
+                    </select>
+                    <button id="push">Add</button>
+                </div>
             </div>
             <div id="tasks"></div>
         </div>
