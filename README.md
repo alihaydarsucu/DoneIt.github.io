@@ -65,12 +65,15 @@ Here are the supported languages;
 **HTML ,CSS , and JavaScript**
 
 ## Special Thanks To
-#### For Project;
+#### Friends;
 
 - Osman Nuri Yıldız 
 - Mahmut Esat Arslan
 
-#### For Translations;
+#### Tester;
+- Hacı Salih Toker
+
+#### Translators;
 
 - Yusuf Vural (Arabic)
 - Osiya Kurbonova (Russian and Uzbek)
