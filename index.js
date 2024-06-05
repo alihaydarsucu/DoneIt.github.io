@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("push").addEventListener("click", function () {
     const input = document.querySelector("#wrapper input");
-    const category = document.querySelector("#category-dropdown").value;
+    const category = document.querySelector("#task-category").value; 
     addTask(input.value, category);
     input.value = "";
     localStorage.setItem("tasks", tasks.innerHTML);
@@ -156,7 +156,7 @@ function addTask(task, category) {
 
   const newTask = document.createElement("div");
   newTask.classList.add("task");
-  newTask.setAttribute("data-category", category);
+  newTask.setAttribute("data-category", category); 
   newTask.innerHTML = `
     <span>${task}</span>
     <button class="edit">
@@ -187,7 +187,7 @@ function DeleteFunction(tasksParent) {
     deleteButtons.forEach(button => {
       button.addEventListener("click", function () {
         const task = this.parentElement;
-        task.remove(); // Bu satırda değişiklik yapıldı
+        task.remove(); 
         localStorage.setItem("tasks", tasks.innerHTML);
       });
     });
