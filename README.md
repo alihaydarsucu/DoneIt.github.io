@@ -1,7 +1,7 @@
 
 # Done It
 
-https://alihaydarsucu.github.io/done-it.github.io/#
+https://alihaydarsucu.github.io/DoneIt.github.io/#
 
 Done It is a task management application designed to help users easily plan and track their tasks. With a simple interface, you can add, edit, and categorize tasks into work, personal, or other categories. 
 
