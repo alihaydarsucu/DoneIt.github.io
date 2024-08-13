@@ -64,10 +64,3 @@ Here are the supported languages;
 
 **HTML ,CSS , and JavaScript**
 
-## Special Thanks To
-
-- Osman Nuri Yıldız 
-- Mahmut Esat Arslan
-- H. Salih Toker (for Tests)
-- Yusuf Vural (for Arabic)
-- Osiya Kurbonova (for Russian and Uzbek)
