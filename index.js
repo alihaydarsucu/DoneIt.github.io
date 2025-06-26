@@ -14,6 +14,8 @@ const otherCategory1 = document.getElementById("otherCategory1");
 const tasks = document.getElementById("tasks");
 const error = document.getElementById("error");
 const buttons = document.querySelectorAll(".language-section a");
+const languageIcon = document.querySelector(".language-icon");
+const languageSection = document.querySelector(".language-section");
 
 const data = {
   english: {
@@ -44,7 +46,7 @@ const data = {
     personalCategory1: "Kişisel",
     otherCategory1: "Diğer",
     searchInputText: "Yapılacaklarda arayın...",
-    error : "Girdi boş olmamalıdır!"
+    error: "Girdi boş olmamalıdır!"
   },
   arabic: {
     firstLine: "تم ذلك",
@@ -59,7 +61,7 @@ const data = {
     personalCategory1: "شخصي",
     otherCategory1: "أخرى",
     searchInputText: "مهام البحث...",
-    error : "يجب ألا تكون المدخلات فارغة!"
+    error: "يجب ألا تكون المدخلات فارغة!"
   },
   russian: {
     firstLine: "Отделка",
@@ -93,32 +95,43 @@ const data = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+// Initialize the app
+document.addEventListener("DOMContentLoaded", function() {
+  // Load tasks from localStorage
   const storedTasks = localStorage.getItem("tasks");
   if (storedTasks) {
     tasks.innerHTML = storedTasks;
-    DeleteFunction(tasks);
+    attachTaskEventListeners(tasks);
   }
 
-  document.getElementById("push").addEventListener("click", function () {
+  // Load filter state from localStorage
+  const storedFilter = localStorage.getItem("taskFilter");
+  if (storedFilter) {
+    categoryDropdown.value = storedFilter;
+  }
+
+  // Add task button event listener
+  pushButton.addEventListener("click", function() {
     const input = document.querySelector("#wrapper input");
-    const category = document.querySelector("#task-category").value; 
+    const category = document.querySelector("#task-category").value;
     addTask(input.value, category);
     input.value = "";
     localStorage.setItem("tasks", tasks.innerHTML);
   });
 
+  // Language selector functionality
   buttons.forEach((button) => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function(e) {
+      e.stopPropagation();
       const activeElement = document.querySelector(".language-section .active");
       if (activeElement) {
         activeElement.classList.remove("active");
       }
 
       button.classList.add("active");
-
       const attr = button.getAttribute("language");
 
+      // Update all text elements
       firstLine.textContent = data[attr].firstLine;
       secondLine.textContent = data[attr].secondLine;
       pushButton.textContent = data[attr].pushButton;
@@ -132,23 +145,50 @@ document.addEventListener("DOMContentLoaded", function () {
       personalCategory1.textContent = data[attr].personalCategory1;
       workCategory1.textContent = data[attr].workCategory1;
       allCategories.textContent = data[attr].allCategories;
+
+      languageSection.style.display = "none";
       updateTaskContainer();
     });
   });
 
-  categoryDropdown.addEventListener("change", function () {
+  // Language icon click handler
+  languageIcon.addEventListener("click", function(e) {
+    e.stopPropagation();
+    languageSection.style.display = languageSection.style.display === "block" ? "none" : "block";
+  });
+
+  // Close language selector when clicking outside
+  document.addEventListener("click", function(e) {
+    if (!e.target.closest(".language-part")) {
+      languageSection.style.display = "none";
+    }
+  });
+
+  // Filter functionality
+  categoryDropdown.addEventListener("change", function() {
+    localStorage.setItem("taskFilter", this.value);
     updateTaskContainer();
   });
 
-  searchInputText.addEventListener("input", function () {
+  searchInputText.addEventListener("input", function() {
     updateTaskContainer();
+  });
+
+  // Allow adding tasks with Enter key
+  inputFieldText.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      const category = document.querySelector("#task-category").value;
+      addTask(this.value, category);
+      this.value = "";
+      localStorage.setItem("tasks", tasks.innerHTML);
+    }
   });
 });
 
 function addTask(task, category) {
   if (!task.trim()) {
     error.style.display = "block";
-    setTimeout(function () {
+    setTimeout(function() {
       error.style.display = "none";
     }, 2000);
     return;
@@ -156,7 +196,7 @@ function addTask(task, category) {
 
   const newTask = document.createElement("div");
   newTask.classList.add("task");
-  newTask.setAttribute("data-category", category); 
+  newTask.setAttribute("data-category", category);
   newTask.innerHTML = `
     <span>${task}</span>
     <button class="edit">
@@ -167,14 +207,14 @@ function addTask(task, category) {
     </button>
   `;
   tasks.appendChild(newTask);
-  newTask.querySelector(".edit").addEventListener("click", editTask);
-  DeleteFunction(newTask);
+  attachTaskEventListeners(newTask);
   localStorage.setItem("tasks", tasks.innerHTML);
+  updateTaskContainer();
 }
 
 function editTask() {
   const taskText = this.previousElementSibling.textContent;
-  const newTaskText = prompt("Edit that task", taskText);
+  const newTaskText = prompt("Edit task:", taskText);
 
   if (newTaskText !== null && newTaskText.trim() !== "") {
     this.previousElementSibling.textContent = newTaskText.trim();
@@ -182,17 +222,24 @@ function editTask() {
   }
 }
 
-function DeleteFunction(tasksParent) {
-    const deleteButtons = tasksParent.querySelectorAll(".delete");
-    deleteButtons.forEach(button => {
-      button.addEventListener("click", function () {
-        const task = this.parentElement;
-        task.remove(); 
-        localStorage.setItem("tasks", tasks.innerHTML);
-      });
+function attachTaskEventListeners(tasksParent) {
+  // Attach delete event listeners
+  const deleteButtons = tasksParent.querySelectorAll ? tasksParent.querySelectorAll(".delete") : [];
+  deleteButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      const task = this.parentElement;
+      task.remove();
+      localStorage.setItem("tasks", tasks.innerHTML);
     });
-  }
-  
+  });
+
+  // Attach edit event listeners
+  const editButtons = tasksParent.querySelectorAll ? tasksParent.querySelectorAll(".edit") : [];
+  editButtons.forEach(button => {
+    button.addEventListener("click", editTask);
+  });
+}
+
 function updateTaskContainer() {
   const filterCategory = categoryDropdown.value;
   const filterText = searchInputText.value.toLowerCase().trim();
@@ -203,7 +250,7 @@ function updateTaskContainer() {
     const taskText = task.textContent.toLowerCase().trim();
 
     if ((filterCategory === "" || taskCategory === filterCategory) &&
-        (filterText === "" || taskText.includes(filterText))) {
+      (filterText === "" || taskText.includes(filterText))) {
       task.style.display = "grid";
     } else {
       task.style.display = "none";

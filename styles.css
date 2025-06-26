@@ -1,10 +1,12 @@
 * {
-    box-sizing:  border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     background-color: #EDF5F4;
-    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -20,6 +22,32 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
+    margin-top: 20px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.app-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .container_error {
@@ -27,6 +55,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0 20px;
 }
 
 .container {
@@ -40,8 +69,7 @@ body {
     position: relative;
     min-height: 10px;
     box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
-    margin-top: 4em;
-    font-family: "Poppins", sans-serif;
+    margin-top: 2em;
     z-index: 2;
     padding: 20px;
 }
@@ -131,6 +159,11 @@ body {
     color: #ffffff;
     cursor: pointer;
     padding: 0.5em;
+    transition: background-color 0.2s ease;
+}
+
+#wrapper button:hover {
+    background-color: #0077d6;
 }
 
 .first-line {
@@ -138,8 +171,7 @@ body {
     font-weight: bold;
     color: #006FC4;
     text-align: center;
-    line-height: 3px;
-    padding-top: 0.7em;
+    line-height: 1.2;
 }
 
 .second-line {
@@ -147,7 +179,7 @@ body {
     font-size: 20px;
     color: #2f2f4f;
     text-align: center;
-    line-height: 3px;
+    line-height: 1.2;
 }
 
 #tasks {
@@ -165,6 +197,12 @@ body {
     border-radius: 0.5em;
     padding: 10px;
     align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .task button {
@@ -174,10 +212,18 @@ body {
     border: none;
     cursor: pointer;
     outline: none;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task button:hover {
+    opacity: 0.9;
 }
 
 .edit {
-    background-color: green;
+    background-color: #28a745;
 }
 
 .delete {
@@ -200,13 +246,16 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1.5em;
-    margin-right:1em;
+    margin-right: 1em;
+    z-index: 1000;
 }
 
-.language-part:hover .language-section {
-    display: block;
-    background-color: #0262ac;
-    z-index: 999;
+.language-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .language-section {
@@ -218,6 +267,8 @@ body {
     padding: 10px;
     background-color: #0262ac;
     border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .language-section a {
@@ -234,18 +285,19 @@ body {
 }
 
 .language-section a:hover {
-    background-color: #0262ac;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .language-section a.active {
     font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .language-section a:not(:last-child) {
     margin-bottom: 5px;
 }
 
-/* Some Arrangements for mobile devices */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -255,7 +307,8 @@ body {
         width: 100%;
         min-width: auto;
         border-width: 20px;
-        padding: 10px;
+        padding: 15px;
+        margin-top: 1em;
     }
 
     .first-line {
@@ -299,12 +352,23 @@ body {
         padding: 0.5em 0;
     }
 
-    #category-dropdown {
-        text-align: center;
-    }
-    
-    #task-category {
-        text-align: center;
+    .logo-title {
+        flex-direction: column;
+        gap: 5px;
     }
 
+    .app-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .task {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 5px;
+    }
+
+    .task button {
+        width: 100%;
+    }
 }
